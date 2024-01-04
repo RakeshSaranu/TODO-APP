@@ -1,0 +1,109 @@
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.container{
+    background-image:url("./images/abc.jpg");
+    height: 100vh;
+    background-position: center;
+    background-size:cover;
+    width:100%;
+    height: 950px;
+    padding:10px;
+    background-attachment: scroll;
+}
+.todo-app{
+    background-color: white;
+    width:100%;
+    max-width: 700px;
+    margin:100px auto 20px;
+    padding:40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h1{
+    display:flex;
+    align-items: center;
+    color:black;
+    margin-bottom:20px;
+}
+.row{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background:linear-gradient(135deg,#a1c4fd , #c2e9fb);
+    color: black;
+    padding-left: 15px;
+    border-radius: 30px;
+    height: 50px;
+    font-weight: 50px;
+   
+}
+input{
+    flex:1;
+    border:none;
+    outline: none;
+    background: transparent;
+}
+button{
+    border:none;
+    outline: none;
+    padding:16px 50px;
+    background-color: #f77f00 ;
+    color:white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover{
+    background-color: #4cbb17;
+}
+ul li{
+    list-style: none;
+    font-size: 22px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    padding:20px 8px 12px 50px;
+    background:linear-gradient(135deg,#a1c4fd , #c2e9fb);
+    border-radius: 30px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li span{
+    position: absolute;
+    right: 15px;
+    top:5px;
+    width: 40px;
+    height:40px;
+    font-size:22px;
+    border-radius: 50%;
+    color:black;
+    line-height:40px;
+    text-align: center;
+}
+ul li span:hover{
+    background-color: #FF0000;
+}
+
+ul li::before{
+    content:'';
+    position:absolute;  
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top:17px;
+    left: 8px;
+}
+ul li.checked{
+    color:#006400 ;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(./images/checked.png);
+}
